@@ -5,12 +5,10 @@ Home: https://github.com/NSLS-II-CHX/chxtools
 
 Package license: BSD
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/chxtools-feedstock/blob/master/LICENSE.txt)
 
 Summary: Repository for data collection and analysis scripts that are useful at
 the CHX beamline at NSLS-II (11-id).
-
-
 
 
 Current build status
