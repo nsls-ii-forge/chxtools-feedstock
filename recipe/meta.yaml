@@ -12,8 +12,8 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -34,6 +34,17 @@ requirements:
 test:
   imports:
     - chxtools
+    - chxtools._version
+    - chxtools.attfuncs
+    - chxtools.attfuncs2
+    - chxtools.bpm_stability
+    - chxtools.chx_utilities
+    - chxtools.chx_wrapper
+    - chxtools.handlers
+    - chxtools.plot_sid
+    - chxtools.pv_explorer
+    - chxtools.transfuncs
+    - chxtools.xfuncs
 
 about:
   home: https://github.com/NSLS-II-CHX/chxtools
