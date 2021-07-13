@@ -40,7 +40,9 @@ test:
     - chxtools.bpm_stability
     - chxtools.chx_utilities
     - chxtools.chx_wrapper
-    - chxtools.handlers
+    # This import attempts to create a databroker instance with the 'chx'
+    # catalog config, so excluding it from this simple test.
+    # - chxtools.handlers
     - chxtools.plot_sid
     - chxtools.pv_explorer
     - chxtools.transfuncs
