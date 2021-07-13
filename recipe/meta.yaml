@@ -12,15 +12,15 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python !=3.9.5
     - pip
   run:
-    - python
+    - python !=3.9.5
     - databroker
     - eiger-io
     - matplotlib
@@ -34,6 +34,19 @@ requirements:
 test:
   imports:
     - chxtools
+    - chxtools._version
+    - chxtools.attfuncs
+    - chxtools.attfuncs2
+    - chxtools.bpm_stability
+    - chxtools.chx_utilities
+    - chxtools.chx_wrapper
+    # The imports below attempts to create a databroker instance with the 'chx'
+    # catalog config, so excluding it from this simple test.
+    # - chxtools.handlers
+    # - chxtools.plot_sid
+    - chxtools.pv_explorer
+    - chxtools.transfuncs
+    - chxtools.xfuncs
 
 about:
   home: https://github.com/NSLS-II-CHX/chxtools
